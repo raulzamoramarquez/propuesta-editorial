@@ -167,5 +167,13 @@ L = \lims_{n \to \infty} \sum_{k=1}^n \frac{1}{n} \cdot f\left( \frac{k}{n} \rig
   <strong>Nota técnica:</strong> Se utiliza tex-chtml-nofont.js para forzar el uso de la tabla OpenType MATH en MathJax v4, asegurando una renderización nativa de alta calidad.
 </p>
 
+
+  <!-- Script de espera de fuentes -->
+  <script>
+    document.fonts.ready.then(() => {
+      MathJax.typesetPromise();
+    });
+  </script>
+  
 </body>
 </html>
