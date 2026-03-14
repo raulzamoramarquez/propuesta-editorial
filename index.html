@@ -77,8 +77,11 @@
 
 <script>
 MathJax = {
+  loader: {
+    load: ['[tex]/mhchem']
+  },
   output: {
-    font: "mathjax-fira"
+    font: "mathjax-fira"  // CAMBIADO: Volvemos al nombre estándar, no la URL completa
   },
   tex: {
     packages: {'[+]': ['mhchem']},
