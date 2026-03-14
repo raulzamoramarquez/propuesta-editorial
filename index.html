@@ -79,13 +79,13 @@
 
 
 
-<script>
+
+
+
+  <script>
 window.MathJax = {
   loader: {
-    load: ['[tex]/mhchem', '[mathjax-fira]/chtml'],
-    paths: {
-      'mathjax-fira': 'https://cdn.jsdelivr.net/npm/mathjax-fira-fonts@1.0.0-beta.1'
-    }
+    load: ['[tex]/mhchem']
   },
   tex: {
     packages: {'[+]': ['mhchem']},
@@ -103,19 +103,12 @@ window.MathJax = {
     }
   },
   output: {
-    font: "mathjax-fira"
-  },
-  startup: {
-    typeset: true,
-    ready: () => {
-      console.log('MathJax is ready');
-      MathJax.startup.defaultReady();
-    }
+    font: 'mathjax-fira'
   }
 };
 </script>
 
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-chtml-nofont.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/es5/tex-chtml.js"></script>
   
 
 
