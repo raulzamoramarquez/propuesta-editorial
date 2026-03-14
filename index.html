@@ -83,12 +83,10 @@
 
 
 
-
-
 <script>
-MathJax = {
-  output: {
-    font: "mathjax-fira"
+window.MathJax = {
+  loader: {
+    load: ['[tex]/mhchem']
   },
   tex: {
     packages: {'[+]': ['mhchem']},
@@ -104,9 +102,13 @@ MathJax = {
       "lims": "\\mathop{\\text{lím}}\\limits",
       "dd": "\\,\\mathrm{d}"
     }
+  },
+  output: {
+    font: "mathjax-fira"
   }
 };
 </script>
+  
 
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@4/es5/tex-chtml-full.js"></script>
   
