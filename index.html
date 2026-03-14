@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Configuración general con fondo sutil */
   body {
     font-family: "Poppins", sans-serif;
     margin: 40px auto;
@@ -36,7 +35,7 @@
     padding-bottom: 12px;
     margin: 0 auto 30px auto;
     max-width: 80%;
-    line-height: 1.2; /* Ajuste para el salto de línea */
+    line-height: 1.2;
   } 
   
   h2 {
@@ -76,12 +75,9 @@
 </style>
 
 <script>
-MathJax = {
+window.MathJax = {
   loader: {
     load: ['[tex]/mhchem']
-  },
-  output: {
-    font: "mathjax-fira"  // CAMBIADO: Volvemos al nombre estándar, no la URL completa
   },
   tex: {
     packages: {'[+]': ['mhchem']},
@@ -97,16 +93,24 @@ MathJax = {
       "lims": "\\mathop{\\text{lím}}\\limits",
       "dd": "\\,\\mathrm{d}"
     }
+  },
+  output: {
+    font: "mathjax-fira"
   }
 };
 </script>
 
-<!-- CAMBIADO: Usamos la versión beta.7 que es más estable y compatible con Fira Math -->
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-chtml-nofont.js"></script>
-  
+
 </head>
 
 
+
+
+
+
+
+  
   
 <body>
 
