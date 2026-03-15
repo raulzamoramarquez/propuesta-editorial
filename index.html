@@ -75,30 +75,42 @@
             }
         </style>
 
-        <script>
-            MathJax = {
-                loader: {
-                    load: ['[tex]/mhchem']
-                },
-                tex: {
-                    packages: {'[+]': ['mhchem']},
-                    macros: {
-                        "e": "\\mathrm{e}",
-                        "pi": "\\mathrm{π}",
-                        "i": "\\mathrm{i}",
-                        "phi": "\\text{𝜙}",
-                        "sen": "\\operatorname{sen}",
-                        "tg": "\\operatorname{tg}",
-                        "arctg": "\\operatorname{arctg}",
-                        "cosec": "\\operatorname{cosec}",
-                        "lims": "\\mathop{\\text{lím}}\\limits",
-                        "dd": "\\,\\mathrm{d}"
-                    }
-                }
-            };
-        </script>
+<script>
+    window.MathJax = {
+        loader: {
+            load: ['[tex]/mhchem']
+        },
+        // Añadimos la sección de salida para especificar la fuente
+        output: {
+            font: 'mathjax-fira',
+            displayMessages: false
+        },
+        tex: {
+            packages: {'[+]': ['mhchem']},
+            macros: {
+                "e": "\\mathrm{e}",
+                "pi": "\\mathrm{π}",
+                "i": "\\mathrm{i}",
+                "phi": "\\text{𝜙}",
+                "sen": "\\operatorname{sen}",
+                "tg": "\\operatorname{tg}",
+                "arctg": "\\operatorname{arctg}",
+                "cosec": "\\operatorname{cosec}",
+                "lims": "\\mathop{\\text{lím}}\\limits",
+                "dd": "\\,\\mathrm{d}"
+            }
+        },
+        startup: {
+            ready: () => {
+                console.log('MathJax configurado con Fira Math');
+                MathJax.startup.defaultReady();
+            }
+        }
+    };
+</script>
 
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@4/es5/tex-chtml.js"></script>   
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@4/es5/tex-chtml.js"></script>
+
     </head>
 
     <body>
