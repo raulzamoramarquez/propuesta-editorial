@@ -76,20 +76,20 @@
 </style>
 
 <script>
+  
   window.MathJax = {
   loader: {
-    paths: {
-      'mathjax-fira': 'https://cdn.jsdelivr.net/npm/mathjax-fira-font@1.0.0-beta.1/es5/output/chtml/fonts/fira-math'
-    },
     load: ['[tex]/mhchem', '[mathjax-fira]/chtml']
   },
-  chtml: {
+  output: {
     font: 'mathjax-fira'
   },
   tex: {
     packages: {'[+]': ['mhchem']}
   }
 };
+
+  
   tex: {
       packages: {'[+]': ['mhchem']},
       macros: {
