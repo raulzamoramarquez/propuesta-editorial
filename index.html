@@ -1,149 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Prueba tipográfica: Poppins + Fira Math</title>
+<meta charset="utf-8">
+<title>Prueba tipográfica: Poppins + Fira Math</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 40px auto;
-            max-width: 900px;
-            line-height: 1.6;
-            color: #2c3e50; 
-            background-color: #fdfdfd; 
-            padding: 0 20px;
-        }
+<style>
+  /* Configuración general con fondo sutil */
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+    color: #2c3e50; 
+    background-color: #fdfdfd; 
+    padding: 0 20px;
+  }
 
-        .logo {
-            display: block;
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
+  .logo {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
 
-        h1 {
-            font-weight: 600;
-            color: #1a5276;
-            text-align: center;
-            border-bottom: 2px solid #d4e6f1;
-            padding-bottom: 12px;
-            margin: 0 auto 30px auto;
-            max-width: 80%;
-            line-height: 1.2;
-        } 
-        
-        h2 {
-            font-weight: 600;
-            color: #2980b9;
-            border-bottom: 1px solid #ebf5fb;
-            padding-bottom: 8px;
-            margin-top: 40px;
-        }
+  h1 {
+    font-weight: 600;
+    color: #1a5276;
+    text-align: center;
+    border-bottom: 2px solid #d4e6f1;
+    padding-bottom: 12px;
+    margin: 0 auto 30px auto;
+    max-width: 80%;
+    line-height: 1.2; /* Ajuste para el salto de línea */
+  } 
+  
+  h2 {
+    font-weight: 600;
+    color: #2980b9;
+    border-bottom: 1px solid #ebf5fb;
+    padding-bottom: 8px;
+    margin-top: 40px;
+  }
 
-        .highlight {
-            background-color: #f4f9fd;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
+  .highlight {
+    background-color: #f4f9fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
 
-        .svg-container {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #d6dbdf;
-            border-radius: 8px;
-        }
+  .svg-container {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d6dbdf;
+    border-radius: 8px;
+  }
 
-        .svg-container img {
-            width: 8em;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            shape-rendering: geometricPrecision;
-        }
-    </style>
+  .svg-container img {
+    width: 8em;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    shape-rendering: geometricPrecision;
+  }
+</style>
 
-    <script>
-        window.MathJax = {
-            loader: {
-                /* Definimos la ruta externa para Fira Math para que funcione en GitHub Pages */
-                paths: {
-                    'mathjax-fira': 'https://cdn.jsdelivr.net/npm/mathjax-fira-font@1.0.0-beta.1/es5/output/chtml/fonts/fira-math'
-                },
-                load: ['[tex]/mhchem', 'output/chtml', '[mathjax-fira]/chtml']
-            },
-            output: {
-                font: 'mathjax-fira',
-                displayMessages: false
-            },
-            tex: {
-                packages: {'[+]': ['mhchem']},
-                macros: {
-                    "e": "\\mathrm{e}",
-                    "pi": "\\mathrm{π}",
-                    "i": "\\mathrm{i}",
-                    "phi": "\\text{𝜙}",
-                    "sen": "\\operatorname{sen}",
-                    "tg": "\\operatorname{tg}",
-                    "arctg": "\\operatorname{arctg}",
-                    "cosec": "\\operatorname{cosec}",
-                    "lims": "\\mathop{\\text{lím}}\\limits",
-                    "dd": "\\,\\mathrm{d}"
-                }
-            },
-            startup: {
-                ready: () => {
-                    MathJax.startup.defaultReady();
-                }
-            }
-        };
-    </script>
+<script>
+MathJax = {
+  loader: {
+    load: ['[tex]/mhchem']
+  },
+  output: {
+    font: "mathjax-fira"
+  },
+  tex: {
+    packages: {'[+]': ['mhchem']},
+    macros: {
+      "e": "\\mathrm{e}",
+      "pi": "\\mathrm{π}",
+      "i": "\\mathrm{i}",
+      "phi": "\\text{𝜙}",
+      "sen": "\\operatorname{sen}",
+      "tg": "\\operatorname{tg}",
+      "arctg": "\\operatorname{arctg}",
+      "cosec": "\\operatorname{cosec}",
+      "lims": "\\mathop{\\text{lím}}\\limits",
+      "dd": "\\,\\mathrm{d}"
+    }
+  }
+};
+</script>
 
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.4/tex-chtml.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js"></script>
+    
 </head>
 
+
+  
 <body>
 
-    <img src="logo.png" alt="Logo de la empresa" class="logo">
+<img src="logo.png" alt="Logo de la empresa" class="logo">
 
-    <h1>Matrimonio por conveniencia: <br> texto en Poppins <br> con ecuaciones en Fira Math</h1>
+<h1>Matrimonio por conveniencia: <br> texto en Poppins <br> con ecuaciones en Fira Math</h1>
 
-    <h2>1. Expresiones en línea</h2>
-    <p>
-        Se verifica la integración en el párrafo. Este es un ejemplo \( E = mc^2 \) y este es otro ejemplo \( \e^{\i\pi} + 1 = 0 \). 
-    </p>
+<h2>1. Expresiones en línea</h2>
+<p>
+  Se verifica la integración en el párrafo. Este es un ejemplo \( E = mc^2 \) y este es otro ejemplo \( \e^{\i\pi} + 1 = 0 \). 
+  
+  Ahora se muestran operadores complejos como \( \int_0^\infty \e^{-x^2} \dd x = \frac{\sqrt{\pi}}{2} \) o \( A = \left( \begin{smallmatrix} 1 & 2 \\ 3 & 4 \end{smallmatrix} \right) \) donde el tamaño de la fuente Math es uniforme con Poppins.
+</p>
+  
+<h2>2. Entorno \\begin{aligned} ... \\end{aligned}</h2>
+<p>Renderización de fuentes OpenType Math. El hinting es perfecto:</p>
+<div class="highlight">
+\[
+\begin{aligned}
+\frac{5}{2} + \frac{3}{4} - \frac{1}{2} &= \frac{10}{4} + \frac{3}{4} - \frac{2}{4} \\
+&= \frac{10 + 3 - 2}{4} \\
+&= \frac{11}{4}
+\end{aligned}
+\]
+</div>
 
-    <div class="highlight">
-    \[
-    \begin{aligned}
-    \frac{5}{2} + \frac{3}{4} - \frac{1}{2} &= \frac{10}{4} + \frac{3}{4} - \frac{2}{4} \\
-    &= \frac{10 + 3 - 2}{4} \\
-    &= \frac{11}{4}
-    \end{aligned}
-    \]
-    </div>
+<h2>3. Creación de macros</h2>
+<p>Con MathJax se pueden castellanizar operadores y funciones para mantener la línea editorial:</p>
+\[
+L = \lims_{n \to \infty} \sum_{k=1}^n \frac{1}{n} \cdot f\left( \frac{k}{n} \right) = \int_0^1 f(x) \dd x
+\]
 
-    <h2>3. Paquetes de notación</h2>
-    <div class="highlight">
-    \[
-    \ce{6CO2 + 6H2O ->[luz] C6H12O6 + 6O2}
-    \]
-    </div>
+<h2>4. Tamaños de la fuente adaptados al contexto</h2>
+<p>Aquí podemos ver índices de índices:</p>
+\[
+\phi = 1 + \frac{1}{1 + \frac{1}{1 + \frac{1}{1 + \cdots}}} = \frac{1 + \sqrt{5}}{2}
+\]
 
-    <div class="svg-container">
-        <img src="ejemplo.svg" alt="Gráfico matemático externo">
-    </div>
+<h2>5. Paquetes de notación matemática</h2>
+<p>
+  Gracias al paquete mhchem, es posible escribir reacciones químicas de forma semántica y profesional:
+</p>
+<div class="highlight">
+\[
+\ce{6CO2 + 6H2O ->[luz] C6H12O6 + 6O2}
+\]
+</div>
+
+<h2>6. Integración de gráficos externos (XeLaTeX + SVG)</h2>
+<p>
+  Aquí se carga el archivo externo ejemplo.svg. El hinting de la fuente Math se ha perdido por la conversión a curvas; no obstante, el resultado es por demás satisfactorio: 
+</p>
+
+<div class="svg-container">
+  <img src="ejemplo.svg" alt="Gráfico matemático externo">
+</div>
+
+<p style="margin-top: 40px; font-size: 0.85em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px;">
+  <strong>Nota técnica:</strong> Se utiliza tex-chtml-nofont.js para forzar el uso de la tabla OpenType MATH en MathJax v4, asegurando una renderización nativa de alta calidad.
+</p>
 
 </body>
 </html>
