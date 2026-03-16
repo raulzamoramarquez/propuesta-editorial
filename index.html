@@ -80,8 +80,12 @@ window.MathJax = {
   loader: {
     load: ['[tex]/mhchem']
   },
-  output: {
-    font: 'mathjax-fira'
+output: {
+    font: 'mathjax-fira',
+    scale: 1.05, // Incremento sutil para equiparar el "peso" de Poppins
+    chtml: {
+      matchFontHeight: true
+    }
   },
   tex: {
     packages: {'[+]': ['mhchem']},
