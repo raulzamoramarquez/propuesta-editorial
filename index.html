@@ -9,75 +9,70 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-/* Configuración general con fondo sutil */
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 40px auto;
-  max-width: 900px;
-  line-height: 1.6;
-  color: #2c3e50; 
-  background-color: #fdfdfd; 
-  padding: 0 20px;
-}
+  /* Configuración general con fondo sutil */
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+    color: #2c3e50; 
+    background-color: #fdfdfd; 
+    padding: 0 20px;
+  }
 
-.logo {
-  display: block;
-  max-width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-  opacity: 0.9;
-}
+  .logo {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
 
-h1 {
-  font-weight: 600;
-  color: #1a5276;
-  text-align: center;
-  border-bottom: 2px solid #d4e6f1;
-  padding-bottom: 12px;
-  margin: 0 auto 30px auto;
-  max-width: 80%;
-  line-height: 1.2;
-} 
+  h1 {
+    font-weight: 600;
+    color: #1a5276;
+    text-align: center;
+    border-bottom: 2px solid #d4e6f1;
+    padding-bottom: 12px;
+    margin: 0 auto 30px auto;
+    max-width: 80%;
+    line-height: 1.2;
+  } 
+  
+  h2 {
+    font-weight: 600;
+    color: #2980b9;
+    border-bottom: 1px solid #ebf5fb;
+    padding-bottom: 8px;
+    margin-top: 40px;
+  }
 
-h2 {
-  font-weight: 600;
-  color: #2980b9;
-  border-bottom: 1px solid #ebf5fb;
-  padding-bottom: 8px;
-  margin-top: 40px;
-}
+  .highlight {
+    background-color: #f4f9fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
 
-.highlight {
-  background-color: #f4f9fd;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid #3498db;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-}
+  .svg-container {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d6dbdf;
+    border-radius: 8px;
+  }
 
-.svg-container {
-  text-align: center;
-  margin: 30px 0;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #d6dbdf;
-  border-radius: 8px;
-}
-
-.svg-container img {
-  width: 8em;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  shape-rendering: geometricPrecision;
-}
-
-/* ajuste tipográfico opcional para ecuaciones */
-mjx-container {
-  font-size: 1.05em;
-}
+  .svg-container img {
+    width: 8em;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    shape-rendering: geometricPrecision;
+  }
 </style>
 
 <script>
@@ -85,51 +80,54 @@ window.MathJax = {
   loader: {
     load: ['[tex]/mhchem']
   },
+  output: {
+    font: 'mathjax-fira'
+  },
   tex: {
     packages: {'[+]': ['mhchem']}
   },
-  output: {
-    font: 'mathjax-fira'
+  startup: {
+    pageReady() {
+      // Precargar TODOS los datos de fuente antes de renderizar (solución oficial)
+      return MathJax.startup.document.outputJax.font
+        .loadDynamicFiles()
+        .then(() => MathJax.startup.defaultPageReady());
+    }
   }
 };
 </script>
 
+<!-- Script de MathJax -->
 <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js"></script>
 
 </head>
-
 <body>
-
-<h1>Matrimonio por conveniencia:<br>texto en Poppins<br>con ecuaciones en Fira Math</h1>
-
-<h2>1. Expresiones matemáticas</h2>
 
 <p>
 Ejemplo: \( a + b = c d e f g h i j k l mn o p q \)
 </p>
 
-<h2>2. Expresiones químicas</h2>
-
 <p>
-Química: \( \ce{H2O} \) y \( \ce{CO2} \)
+Química: \(\ce{H2O}\) y \(\ce{CO2}\)
 </p>
 
 <script>
-console.log('📋 Scripts cargados:');
-document.querySelectorAll('script').forEach(s => {
-  if (s.src) console.log('  - ' + s.src);
-});
+  console.log('📋 Scripts cargados:');
+  document.querySelectorAll('script').forEach(s => {
+    if (s.src) console.log('  - ' + s.src);
+  });
 </script>
 
 <script>
-setTimeout(() => {
-  if (typeof MathJax !== 'undefined') {
-    console.log('✅ MathJax cargado:', MathJax.version);
-    console.log('✅ Fuente:', MathJax.config.output.font);
-  } else {
-    console.log('❌ MathJax no está definido');
-  }
-}, 2000);
+  // Verificar que MathJax cargó
+  setTimeout(() => {
+    if (typeof MathJax !== 'undefined') {
+      console.log('✅ MathJax cargado:', MathJax.version);
+      console.log('✅ Fuente:', MathJax.config.output.font);
+    } else {
+      console.log('❌ MathJax no está definido');
+    }
+  }, 2000);
 </script>
 
 </body>
