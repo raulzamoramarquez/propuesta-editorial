@@ -75,12 +75,15 @@
   }
 
 
-  /* Corrección quirúrgica para Firefox en móviles (Android) */
-@supports (-moz-appearance:none) {
-  mjx-container {
-    font-size: 1.15em;  /* Corrige el tamaño en Firefox */
+/* Corrección SOLO para Firefox en Android */
+@supports (-moz-appearance: none) {
+  @media (pointer: coarse) and (max-width: 768px) {
+    mjx-container {
+      font-size: 1.2em !important;
+    }
   }
 }
+
 
 
 
