@@ -76,13 +76,11 @@
 
 
   /* Corrección quirúrgica para Firefox en móviles (Android) */
-  @supports (-moz-appearance:none) {
-    @media (pointer: coarse) {
-      mjx-container {
-        font-size: 1.18em !important;
-      }
-    }
+@supports (-moz-appearance:none) {
+  mjx-container[jax="CHTML"] {
+    font-size:1.15em;
   }
+}
 
 
 
