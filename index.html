@@ -74,6 +74,17 @@
     margin: 0 auto;
     shape-rendering: geometricPrecision;
   }  
+
+/* --- PARCHE PARA FIREFOX ANDROID --- */
+  @supports (-moz-appearance:none) {
+    @media (pointer: coarse) and (max-width: 800px) {
+      mjx-container {
+        font-size: 1.15em !important;
+      }
+    }
+  }
+
+  
 </style>
 
   
