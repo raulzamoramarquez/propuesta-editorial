@@ -74,6 +74,17 @@
     margin: 0 auto;
     shape-rendering: geometricPrecision;
   }    
+
+/* --- EVITAR FONT BOOSTING SOLO EN FIREFOX ANDROID --- */
+@supports (-moz-appearance:none) {
+  @media (max-width: 800px) and (pointer: coarse) {
+    body {
+      max-height: 999999px;
+    }
+  }
+}
+
+  
 </style>
 
   
